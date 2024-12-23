@@ -27,7 +27,14 @@ mongoose
     });
 
 
-app.use('/',userRoutes);
+app.use('/users',userRoutes);
+
+app.get('/', (req, res) => {
+    res.send("Welcome to Backend");
+});
+
+
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Welcome ..., Your server is running on PORT ${PORT}`);
